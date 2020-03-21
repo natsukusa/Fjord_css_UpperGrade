@@ -149,15 +149,16 @@ p {
   justify-content: center;
   align-items: center;
   height: 120px;
-  background-color: #9b9b9b;
+  background-color: #999;
   text-align: center;
 }
 .header__title {
   font-size: 36px;
   font-weight: bold;
+  letter-spacing: 0.1em;
 }
 .global-nav {
-  background-color: ivory;
+  background-color: #ddd;
 }
 .global-nav__item {
   height: 60px;
@@ -176,18 +177,19 @@ p {
 }
 .bread-crumbs__item a{
   text-decoration: none;
+  background-color: #666;
   color: #fff;
 }
 .top-ads {
-  background-color: #cecece;
-  padding: 20px;
+  background-color: #ddd;
+  padding: 16px;
 }
 .top-ads__items {
   display: flex;
   justify-content: space-between;
 }
 .top-ads__item {
-  width: 300px;
+  width: 304px;
 }
 
 .body {
@@ -196,12 +198,72 @@ p {
   justify-content: space-between;
 }
 .main {
-  flex-basis: 640px;
+  flex-basis: 644px;
+}
+.main-header {
   background-color: #eee;
-  padding: 20px;
+  height:80px;
+}
+.article {
+  background-color: #ddd;
+  padding: 16px;
 }
 .aside {
-  flex-basis: 340px;
-  padding: 20px;
-  background-color: #6e6e6e;
+  flex-basis: 336px;
+  padding: 16px;
+  background-color: #666;
+}
+.form {
+  background-color: #fff;
+  padding: 16px;
+
+}
+.footer {
+  display: grid;
+  grid-template-rows: 1fr 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "footer-nav about-author"
+    "footer-copyright footer-copyright";
+  gap: 32px;
+  background-color: #444;
+  padding: 20px 16px;
+}
+.footer-nav{
+  grid-area: footer-nav;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav__link {
+  text-decoration: none;
+  color:#fff;
+}
+.about-author{
+  grid-area: about-author;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 100px 1fr;
+  /* gap:16px; */
+  grid-template-areas:
+    "about-author__title about-author__title"
+    "about-author__image about-author__descriptions";
+  background-color: #ddd;
+  width:474px;
+  height: 250px;
+  padding: 16px;
+  border-radius: 4px;
+}
+.about-author__title{
+  grid-area: about-author__title;
+}
+.about-author__image{
+  grid-area: about-author__image;
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.footer-copyright {
+  grid-area: footer-copyright;
+  color: #fff;
+  text-align: center;
 }
