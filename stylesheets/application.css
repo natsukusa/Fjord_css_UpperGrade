@@ -103,3 +103,105 @@ body {
 ここから下にCSSを書いてデザインを入れよう
 ////////////////////////////////////////
 */
+
+/* HTMLのクラス分け一覧
+div class="container"
+  header class="header"
+    h1 class="header__title"
+  nav class="global-nav"
+    ul class="global-nav__items"
+  nav class="bread-crumbs"
+  div class="top-ads"
+  div class="body"
+    main class="main"
+      header class="main-header"
+      article class="article"
+        h3 class="article__title"
+        p class="article__paragraph"
+        p class="article__paragraph"
+        h4 class="article__sub-title"
+        p class="article__paragraph"
+        ul class="article__unorder-list"
+        blockquote class="article__blockquote"
+        p class="article__paragraph"
+        img src="hoge" class="article__image"
+        h5 class="article__sub-sub-title"
+        p class="article__paragraph"
+        ol class="article__order-list"
+      div class="form"
+        h3 class="form__title"
+        div class="form-item"  ９個
+    aside class="aside"
+      div class="aside-ads"
+      nav class="local-nav"
+  footer class="footer"
+    nav class="footer-nav"
+    section class="about-author"
+    small class="footer-copyright"
+*/
+
+p {
+  line-height: 1.8;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: #9b9b9b;
+  text-align: center;
+}
+.header__title {
+  font-size: 36px;
+  font-weight: bold;
+}
+.global-nav {
+  background-color: ivory;
+}
+.global-nav__item {
+  height: 60px;
+  display: inline-block;
+  border-right: 1px solid black;
+}
+.global-nav__link{
+  text-decoration: none;
+  color: #000;
+}
+.bread-crumbs{
+  padding: 8px 16px;
+}
+.bread-crumbs__item{
+  display: inline;
+}
+.bread-crumbs__item a{
+  text-decoration: none;
+  color: #fff;
+}
+.top-ads {
+  background-color: #cecece;
+  padding: 20px;
+}
+.top-ads__items {
+  display: flex;
+  justify-content: space-between;
+}
+.top-ads__item {
+  width: 300px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.main {
+  flex-basis: 640px;
+  background-color: #eee;
+  padding: 20px;
+}
+.aside {
+  flex-basis: 340px;
+  padding: 20px;
+  background-color: #6e6e6e;
+}
