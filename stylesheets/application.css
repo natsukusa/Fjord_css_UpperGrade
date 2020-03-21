@@ -148,7 +148,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: 130px;
   background-color: #999;
   text-align: center;
 }
@@ -158,30 +158,45 @@ p {
   letter-spacing: 0.1em;
 }
 .global-nav {
-  background-color: #ddd;
+  background-color: #ccc;
 }
-.global-nav__item {
+.global-nav__items {
   height: 60px;
-  display: inline-block;
-  border-right: 1px solid black;
+  display: flex;
+}
+.global-nav__item{
+  flex: auto;
+  text-align: center;
+  line-height: 60px;
+}
+.global-nav__item:nth-child(2n){
+  background-color: #aaa;
 }
 .global-nav__link{
   text-decoration: none;
   color: #000;
+  font-size: 14px;
+  font-weight: bold;
 }
 .bread-crumbs{
   padding: 8px 16px;
+  background-color: #555;
 }
 .bread-crumbs__item{
-  display: inline;
+  display: inline-block;
 }
-.bread-crumbs__item a{
+.bread-crumbs__link{
   text-decoration: none;
-  background-color: #666;
   color: #fff;
+  font-size: 14px;
+}
+.bread-crumbs__items li:not(:last-child):after{
+  content: " > ";
+  padding: 0px 3px;
+  color: #aaa;
 }
 .top-ads {
-  background-color: #ddd;
+  background-color: #ccc;
   padding: 16px;
 }
 .top-ads__items {
@@ -195,15 +210,54 @@ p {
 .body {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
 }
 .main {
   flex-basis: 644px;
 }
 .main-header {
+  position: relative;
   background-color: #eee;
   height:80px;
+  padding-left:60px;
+  border-bottom: solid 2px #aaa;
 }
+.main-header__title{
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 80px;
+}
+.main-header::before{
+  position: absolute;
+  left: 16px;
+  bottom: 28px;
+  content: "";
+  width: 0px;
+  height: 12px;
+  border-right: solid 12px #999;
+  border-left: solid 12px #333;
+}
+.main-header::after{
+  position: absolute;
+  left: 16px;
+  bottom: 28px;
+  content: "";
+  width: 0px;
+  height: 12px;
+  margin-bottom: 12px;
+  border-right: solid 12px #333;
+  border-left: solid 12px #999;
+}
+.main-header__title::after{
+  position: absolute;
+  content: "";
+  top:0;
+  right:0;
+  border-style: solid;
+  border-color:#ccc #ccc #aaa #aaa;
+  border-width: 16px  16px 16px 16px;
+  box-shadow: 0px 1.5px #777;
+}
+
 .article {
   background-color: #ddd;
   padding: 16px;
