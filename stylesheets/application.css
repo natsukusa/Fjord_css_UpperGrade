@@ -9,48 +9,129 @@ reset.css を読み込んで全てのスタイルをなくす
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*
@@ -60,7 +141,9 @@ reset.css では足りない初期化を追加
 */
 
 /* 全てに box-sizing: border-box; を適用 */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -93,9 +176,9 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: #666;
-  box-shadow: rgba(0, 0, 0, .4) 0 0 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 8px;
   /* floatを使った場合の対策 */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /*
@@ -143,7 +226,6 @@ div class="container"
 p {
   line-height: 1.8;
 }
-
 .header {
   display: flex;
   justify-content: center;
@@ -165,34 +247,41 @@ p {
   height: 60px;
   display: flex;
 }
-.global-nav__item{
+.global-nav__item {
   flex: auto;
   text-align: center;
   line-height: 60px;
 }
-.global-nav__item:nth-child(2n){
+.global-nav__item:nth-child(2n) {
   background-color: #aaa;
 }
-.global-nav__link{
+.global-nav__link {
   text-decoration: none;
   color: #000;
   font-size: 14px;
   font-weight: bold;
   text-shadow: 0px 1px 10px #ddd;
 }
-.bread-crumbs{
+/* .is-current{
+  color:blue;
+  text-shadow: 5px 5px 20px #6ea7e9;
+} */
+.bread-crumbs {
   padding: 8px 16px;
   background-color: #555;
 }
-.bread-crumbs__item{
+.bread-crumbs__item {
   display: inline-block;
 }
-.bread-crumbs__link{
+.bread-crumbs__link {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
 }
-.bread-crumbs__items li:not(:last-child):after{
+.bread-crumbs__link:hover {
+  color: skyblue;
+}
+.bread-crumbs__items li:not(:last-child):after {
   content: " > ";
   padding: 0px 3px;
   color: #aaa;
@@ -208,7 +297,6 @@ p {
 .top-ads__item {
   width: 304px;
 }
-
 .body {
   display: flex;
   flex-direction: row-reverse;
@@ -219,16 +307,16 @@ p {
 .main-header {
   position: relative;
   background-color: #eee;
-  height:80px;
-  padding-left:60px;
+  height: 80px;
+  padding-left: 60px;
   border-bottom: solid 2px #aaa;
 }
-.main-header__title{
+.main-header__title {
   font-size: 34px;
   font-weight: bold;
   line-height: 80px;
 }
-.main-header::before{
+.main-header::before {
   position: absolute;
   left: 16px;
   bottom: 28px;
@@ -238,7 +326,7 @@ p {
   border-right: solid 12px #999;
   border-left: solid 12px #333;
 }
-.main-header::after{
+.main-header::after {
   position: absolute;
   left: 16px;
   bottom: 28px;
@@ -249,17 +337,16 @@ p {
   border-right: solid 12px #333;
   border-left: solid 12px #999;
 }
-.main-header__title::after{
+.main-header__title::after {
   position: absolute;
   content: "";
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   border-style: solid;
-  border-color:#ccc #ccc #aaa #aaa;
-  border-width: 16px  16px 16px 16px;
+  border-color: #ccc #ccc #aaa #aaa;
+  border-width: 16px 16px 16px 16px;
   box-shadow: 0px 1.5px #777;
 }
-
 .article {
   background-color: #ddd;
   padding: 16px;
@@ -273,52 +360,51 @@ p {
   font-weight: bold;
   padding-left: 24px;
 }
-.article__title::before{
+.article__title::before {
   position: absolute;
   content: "";
   height: 36px;
   width: 12px;
   background-color: #aaa;
   top: -5px;
-  left:0;
+  left: 0;
   border-bottom: solid 18px #333;
 }
-.article__strong{
+.article__strong {
   font-weight: bold;
 }
-.article__sub-title{
+.article__sub-title {
   position: relative;
   font-size: 24px;
   font-weight: bold;
   padding: 4px 24px;
 }
-.article__sub-title::before{
+.article__sub-title::before {
   position: absolute;
   content: "";
   height: 18px;
   width: 5px;
   background-color: #333;
   top: 6px;
-  left:0;  
+  left: 0;
 }
-.article__sub-title::after{
+.article__sub-title::after {
   position: absolute;
   content: "";
-  top:7px;
-  left:6.5px;
+  top: 7px;
+  left: 6.5px;
   border-style: solid;
-  border-color:transparent transparent transparent #333;
-  border-width: 8px  8px 8px 12px;
-
+  border-color: transparent transparent transparent #333;
+  border-width: 8px 8px 8px 12px;
 }
-.article__unorder-list{
+.article__unorder-list {
   list-style-type: disc;
   padding-left: 24px;
   line-height: 2;
 }
 .article__blockquote {
   position: relative;
-  padding:36px 0 18px 36px;
+  padding: 36px 0 18px 36px;
 }
 .article__blockquote::before {
   position: absolute;
@@ -354,7 +440,7 @@ p {
   font-weight: bold;
   padding-left: 24px;
 }
-.article__sub-sub-title::after{
+.article__sub-sub-title::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -365,7 +451,7 @@ p {
   border-radius: 50%;
   background-color: #444;
 }
-.article__sub-sub-title::before{
+.article__sub-sub-title::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -377,59 +463,58 @@ p {
   background-color: #999;
   z-index: 1;
 }
-.article__order-list{
+.article__order-list {
   list-style-type: decimal;
   padding-left: 24px;
   line-height: 2;
 }
-
-
 .aside {
   flex-basis: 336px;
   padding: 16px;
   background-color: #666;
 }
-.aside-ads__item{
+.aside-ads__item {
   margin-bottom: 10px;
 }
-.local-nav{
-  width: 300px;
+.aside-ads__image {
+  width: 100%;
+}
+.local-nav {
+  width: 304px;
   height: 320px;
   background-color: #999;
   overflow-y: scroll;
 }
-
-.local-nav__item{
+.local-nav__item {
   width: auto;
   height: 50px;
   border-bottom: 1px solid black;
 }
-.local-nav__item:nth-child(3){
+.local-nav__item:hover {
   background-color: #777;
+  cursor: pointer;
 }
-.local-nav__link{
+.local-nav__link {
   padding: 16px;
   line-height: 50px;
   text-decoration: none;
   color: #fff;
 }
-
-
-
-
 .form {
-  background-color: #fff;
+  background-color: #fdfdfd;
   padding: 20px;
+  box-shadow: 0px 0px 18px -6px #999 inset;
 }
-.form__title{
+.form__title {
   position: relative;
   font-size: 24px;
   font-weight: bold;
   padding-left: 48px;
   padding-bottom: 24px;
   overflow: hidden;
+  letter-spacing: 0.05em;
 }
-.form__title::before{
+.form__title::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -439,7 +524,7 @@ p {
   height: 24px;
   border: solid 2px #000;
 }
-.form__title::after{
+.form__title::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -450,11 +535,9 @@ p {
   border: solid 2px #000;
   transform: rotate(45deg);
 }
-
-
 .form-item {
   position: relative;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   padding: 12px;
 }
@@ -462,10 +545,10 @@ p {
   width: 180px;
   text-align: right;
   font-size: 14px;
-  padding-top: 8px;
+  padding-top: 7px;
   font-weight: bold;
 }
-.form-item__text-input{
+.form-item__text-input {
   width: 380px;
   height: 28px;
   border-radius: 4px;
@@ -473,13 +556,19 @@ p {
   padding: 6px;
   font-size: 11px;
 }
-.form-item__textarea{
+.form-item__text-input:hover {
+  border: 1.2px solid #444;
+}
+.form-item__textarea {
   width: 380px;
   height: 360px;
   border-radius: 4px;
   border: 1px solid #999;
   padding: 6px;
   font-size: 11px;
+}
+.form-item__textarea:hover {
+  border: 1.2px solid #444;
 }
 .form-item__inline-items {
   width: 380px;
@@ -497,27 +586,28 @@ p {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-/* TODO チェックボックスのみ背景色を変えるには？ */
-
-
-.form-item__select-pull-down{
+/* DONE チェックボックスのみ背景色を変える方法 */
+.form-item:nth-child(2n) .form-item__inline-item {
+  background-color: #ddd;
+}
+.form-item__select-pull-down {
   width: 380px;
   padding: 4px 10px;
   background-color: #eee;
   border-radius: 4px;
 }
-.form-item__select-list{
+.form-item__select-list {
   width: 380px;
   background-color: #eee;
   border-radius: 4px;
   overflow: hidden;
 }
-.form-item__select-list-option{
+.form-item__select-list-option {
   height: 40px;
-  padding: 10px;;
+  padding: 10px;
   border-bottom: 1px solid #ccc;
 }
-.form-item__file{
+.form-item__file {
   width: 380px;
   height: 40px;
   padding: 6px 2px;
@@ -540,13 +630,12 @@ p {
   border-radius: 4px;
   background-color: #ccc;
   border: 1px solid #ccc;
+  cursor: pointer;
 }
 .is-submit {
   background-color: #333;
   color: #fff;
 }
-
-
 .footer {
   display: grid;
   grid-template-rows: 1fr 20px;
@@ -558,7 +647,7 @@ p {
   background-color: #444;
   padding: 20px 16px;
 }
-.footer-nav{
+.footer-nav {
   grid-area: footer-nav;
   display: flex;
   justify-content: space-between;
@@ -568,14 +657,15 @@ p {
   text-decoration: none;
   font-size: 12px;
   line-height: 2.4;
-  color:#fff;
+  color: #fff;
+}
+.footer-nav__link:hover {
+  color: skyblue;
 }
 .footer-nav__link::before {
   content: "> ";
 }
-
-
-.about-author{
+.about-author {
   grid-area: about-author;
   display: grid;
   grid-template-rows: 20px 1fr;
@@ -584,43 +674,39 @@ p {
     "about-author__title about-author__title"
     "about-author__image about-author__descriptions";
   background-color: #ddd;
-  width:474px;
+  width: 474px;
   height: 250px;
   padding: 16px;
   border-radius: 4px;
 }
-.about-author__title{
+.about-author__title {
   grid-area: about-author__title;
   font-size: 14px;
   font-weight: bold;
 }
-.about-author__image{
+.about-author__image {
   grid-area: about-author__image;
-  width:90px;
+  width: 90px;
   height: 90px;
   border-radius: 50%;
-  margin:12px 6px;
+  margin: 12px 6px;
 }
-.about-author__descriptions{
+.about-author__descriptions {
   display: flex;
   flex-wrap: wrap;
   font-size: 13px;
   font-weight: bold;
 }
-.about-author__term{
+.about-author__term {
   width: 18%;
   text-align: right;
   line-height: 1.7;
 }
-.about-author__description{
+.about-author__description {
   width: 82%;
   padding-left: 20px;
   line-height: 1.7;
 }
-
-
-
-
 .footer-copyright {
   grid-area: footer-copyright;
   color: #fff;
