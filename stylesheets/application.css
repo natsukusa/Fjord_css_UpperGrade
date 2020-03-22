@@ -156,6 +156,7 @@ p {
   font-size: 36px;
   font-weight: bold;
   letter-spacing: 0.1em;
+  text-shadow: 0px 1px 4px #ccc;
 }
 .global-nav {
   background-color: #ccc;
@@ -177,6 +178,7 @@ p {
   color: #000;
   font-size: 14px;
   font-weight: bold;
+  text-shadow: 0px 1px 10px #ddd;
 }
 .bread-crumbs{
   padding: 8px 16px;
@@ -387,6 +389,37 @@ p {
   padding: 16px;
   background-color: #666;
 }
+.aside-ads__item{
+  margin-bottom: 10px;
+}
+.local-nav{
+  width: 300px;
+  height: 320px;
+  background-color: #999;
+  overflow-y: scroll;
+}
+
+.local-nav__item{
+  width: auto;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+.local-nav__item:nth-child(3){
+  background-color: #777;
+}
+.local-nav__link{
+  padding: 16px;
+  line-height: 50px;
+  text-decoration: none;
+  color: #fff;
+
+}
+
+
+
+
+
+
 
 
 .form {
@@ -481,6 +514,7 @@ p {
 .form-item__select-list{
   width: 380px;
   background-color: #eee;
+  border-radius: 4px;
   overflow: hidden;
 }
 .form-item__select-list-option{
@@ -491,10 +525,11 @@ p {
 .form-item__file{
   width: 380px;
   height: 40px;
-  padding-top: 6px;
+  padding: 6px 2px;
   font-weight: bold;
   background-color: #eee;
   border: 1px solid #999;
+  border-radius: 4px;
 }
 .form-item__actions {
   width: 380px;
