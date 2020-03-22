@@ -380,11 +380,15 @@ p {
   padding-left: 24px;
   line-height: 2;
 }
+
+
 .aside {
   flex-basis: 336px;
   padding: 16px;
   background-color: #666;
 }
+
+
 .form {
   background-color: #fff;
   padding: 20px;
@@ -421,6 +425,7 @@ p {
 
 
 .form-item {
+  position: relative;
   display:flex;
   justify-content: space-between;
   padding: 12px;
@@ -429,7 +434,8 @@ p {
   width: 180px;
   text-align: right;
   font-size: 14px;
-  padding: 8px;
+  padding-top: 8px;
+  font-weight: bold;
 }
 .form-item__text-input{
   width: 380px;
@@ -437,12 +443,78 @@ p {
   border-radius: 4px;
   border: 1px solid #999;
   padding: 6px;
-  font-size: 12px;
+  font-size: 11px;
 }
+.form-item__textarea{
+  width: 380px;
+  height: 360px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  padding: 6px;
+  font-size: 11px;
+}
+.form-item__inline-items {
+  width: 380px;
+  display: flex;
+}
+.form-item__inline-item {
+  justify-content: flex-start;
+  height: 40px;
+  width: 80px;
+  margin-right: 16px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* TODO チェックボックスのみ背景色を変えるには？ */
 
 
-
-
+.form-item__select-pull-down{
+  width: 380px;
+  padding: 4px 10px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.form-item__select-list{
+  width: 380px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.form-item__select-list-option{
+  height: 40px;
+  padding: 10px;;
+  border-bottom: 1px solid #ccc;
+}
+.form-item__file{
+  width: 380px;
+  height: 40px;
+  padding-top: 6px;
+  font-weight: bold;
+  background-color: #eee;
+  border: 1px solid #999;
+}
+.form-item__actions {
+  width: 380px;
+  height: 40px;
+}
+.form-item__actions-items {
+  display: flex;
+  justify-content: space-around;
+}
+.form-item__action {
+  width: 180px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+.is-submit {
+  background-color: #333;
+  color: #fff;
+}
 
 
 .footer {
