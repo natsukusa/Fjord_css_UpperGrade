@@ -412,12 +412,7 @@ p {
   line-height: 50px;
   text-decoration: none;
   color: #fff;
-
 }
-
-
-
-
 
 
 
@@ -567,16 +562,24 @@ p {
   grid-area: footer-nav;
   display: flex;
   justify-content: space-between;
+  padding-right: 30px;
 }
 .footer-nav__link {
   text-decoration: none;
+  font-size: 12px;
+  line-height: 2.4;
   color:#fff;
 }
+.footer-nav__link::before {
+  content: "> ";
+}
+
+
 .about-author{
   grid-area: about-author;
   display: grid;
-  grid-template-rows: 40px 1fr;
-  grid-template-columns: 100px 1fr;
+  grid-template-rows: 20px 1fr;
+  grid-template-columns: 110px 1fr;
   grid-template-areas:
     "about-author__title about-author__title"
     "about-author__image about-author__descriptions";
@@ -588,13 +591,36 @@ p {
 }
 .about-author__title{
   grid-area: about-author__title;
+  font-size: 14px;
+  font-weight: bold;
 }
 .about-author__image{
   grid-area: about-author__image;
-  width:100px;
-  height: 100px;
+  width:90px;
+  height: 90px;
   border-radius: 50%;
+  margin:12px 6px;
 }
+.about-author__descriptions{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: bold;
+}
+.about-author__term{
+  width: 18%;
+  text-align: right;
+  line-height: 1.7;
+}
+.about-author__description{
+  width: 82%;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+
+
+
 .footer-copyright {
   grid-area: footer-copyright;
   color: #fff;
